@@ -1,7 +1,8 @@
-<x-app-layout>
+<x-app-layout> 
+    {{-- app-layout se encuentra dentro de APP/view/Components/Applayout --}}
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Dashboard') }} 
         </h2>
     </x-slot>
 
