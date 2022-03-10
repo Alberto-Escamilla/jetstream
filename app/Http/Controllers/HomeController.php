@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function __invoke(){
-        // return view('home');
-        $role=Auth::user()->role;
-        if($role=='1'){
-            return view('admin.dashboard');
-        }else{
-            return view('dashboard');
-        }
-    }
+    // public function __invoke(){
+    //     // return view('home');
+    //     $role=Auth::user()->role;
+    //     if($role=='1'){
+    //         return view('admin.dashboard');
+    //     }else{
+    //         return view('dashboard');
+    //     }
+    // }
 }
