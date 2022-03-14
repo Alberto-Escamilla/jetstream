@@ -72,6 +72,7 @@ class Productos extends Component
     {
         return[
             'descripcion.required'=>'El campo descripción es obligatorio',
+            'cantidad.required'=>'El campo cantidad es obligatorio',
         ];
     }
 }
