@@ -13,11 +13,14 @@
                         <div class="mb-4">
                             <label for="descripcion" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
                             <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descripcion" wire:model="descripcion">
+                            @error('descripcion') <span class="error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="mb-4">
                             <label for="cantidad" class="block text-gray-700 text-sm font-bold mb-2">Cantidad:</label>
                             <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cantidad" wire:model="cantidad">
+                            @error('cantidad') <span class="error">{{ $message }}</span> @enderror
+                        
                         </div>
 
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
