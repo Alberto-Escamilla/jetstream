@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Livewire\Productos;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+   Route::get('/productos', Productos::class);
+   Route::get('dashboard',function(){
+       return view('dashboard');
+   })->name('dashboard');
+});
 // NUEVAS RUTAS
 // Route::get('home', HomeController::class)->name('home');
