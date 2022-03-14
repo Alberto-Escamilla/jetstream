@@ -41,6 +41,8 @@ class Productos extends Component
     }
     public function borrar($id){
         Producto::find($id)->delete(); //con este metodo eliminamos los registros deseados.
+        // FLASH MESSAGES 
+        session()->flash('message', 'Registro eliminado!.');
        
     }
     public function guardar(){
@@ -50,6 +52,8 @@ class Productos extends Component
             'cantidad'=> $this->cantidad
 
         ]);
+        session()->flash('message', 
+        $this->id_producto ? '¡Actualización éxitosa!' : 'Se añadió correctamente.');
         $this->cerrarModal();
         $this->limpiarCampos();       
     }

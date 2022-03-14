@@ -4,6 +4,12 @@
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px6 lg:px-8">
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
+        {{-- FLASH MESSAGES --}}
+        @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
         {{-- CON EL ELEMENTO WIRE:CLICK MANDAMOS A LLAMAR LA FUNCIÓN PARA EL MODAL --}}
         <button wire:click="crear" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">Nuevo</button>
         @if ($modal)
