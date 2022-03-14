@@ -7,7 +7,10 @@
         {{-- FLASH MESSAGES --}}
         @if (session()->has('message'))
         <div class="alert alert-success">
-            {{ session('message') }}
+            <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+                <span class="font-medium"></span> {{ session('message') }}
+              </div>
+            {{-- {{ session('message') }} --}}
         </div>
     @endif
         {{-- CON EL ELEMENTO WIRE:CLICK MANDAMOS A LLAMAR LA FUNCIÓN PARA EL MODAL --}}
